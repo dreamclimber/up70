@@ -5,6 +5,7 @@ class Teacher_t:
         self.age = age    # 教师年龄
         self.subject = subject  # 教授科目
 
+    # 输出Teacher信息
     def introduce(self):
         return f"姓名：{self.name}, 年龄：{self.age}, 教授科目：{self.subject}"
 
@@ -16,6 +17,7 @@ class Student_t:
         self.age = age    # 学生年龄
         self.grade = grade  # 学生年级
 
+    # 输出Student信息
     def introduce(self):
         return f"姓名：{self.name}, 年龄：{self.age}, 年级：{self.grade}"
 
@@ -27,6 +29,7 @@ class Course_t:
         self.teacher = teacher  # 授课教师（Teacher 类实例）
         self.students = []  # 学生列表
 
+    # 增加学生
     def addStudent(self, student):
         """添加学生到课程中"""
         if student not in self.students:
@@ -34,6 +37,7 @@ class Course_t:
         else:
             print(f"{student.name} 已经选过此课程！")
 
+    # 移除学生
     def removeStudent(self, student):
         """从课程中移除学生"""
         if student in self.students:
@@ -41,6 +45,7 @@ class Course_t:
         else:
             print(f"{student.name} 未选此课程！")
 
+    # 展示所有信息
     def showCourseInfo(self):
         """输出课程完整信息"""
         print(f"课程名称：{self.course_name}")
@@ -64,10 +69,10 @@ if __name__ == "__main__":
     course2 = Course_t("化学基础", teacher2)
 
     # 创建学生对象
-    student1 = Student_t("小张", 18, "高一")
-    student2 = Student_t("小李", 19, "高二")
-    student3 = Student_t("小王", 17, "高一")
-    student4 = Student_t("小刘", 17, "高一")
+    student1 = Student_t("xiaoli", 18, "高一")
+    student2 = Student_t("xiaozhang", 19, "高二")
+    student3 = Student_t("xiaowang", 17, "高一")
+    student4 = Student_t("xiaoliu", 17, "高一")
 
     # 添加学生到不同课程的学生列表
     course1.addStudent(student1)

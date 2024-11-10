@@ -3,6 +3,7 @@ class Person_t:
         self.name = name  # 姓名
         self.age = age    # 年龄
 
+    # 输出person信息
     def introduce(self):
         print(f"姓名：{self.name}, 年龄：{self.age}")
 

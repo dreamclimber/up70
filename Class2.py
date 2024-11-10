@@ -4,6 +4,7 @@ class Person_t:
         self.name = name  # 姓名
         self.age = age    # 年龄
 
+    # 输出peson的信息
     def introduce(self):
         print(f"姓名：{self.name}, 年龄：{self.age}")
 
@@ -15,7 +16,7 @@ class Teacher_t(Person_t):
         self.subject = subject  # 教授科目
 
     def introduce(self):
-        # 重写 introduce 方法
+        # 重写 introduce 方法，增加subject
         print(f"姓名：{self.name}, 年龄：{self.age}, 教授科目：{self.subject}")
 
 
@@ -26,7 +27,7 @@ class Student_t(Person_t):
         self.grade = grade  # 年级
 
     def introduce(self):
-        # 重写 introduce 方法
+        # 重写 introduce 方法，增加grade
         print(f"姓名：{self.name}, 年龄：{self.age}, 年级：{self.grade}")
 
 
